@@ -19,7 +19,7 @@ import math
 
 # Setup
 wn = turtle.Screen()
-wn.title("Spaceship Shooter!")
+wn.title("Reach For The Stars")
 wn.bgcolor("black")
 wn.setup(width=600, height=600)
 wn.tracer(0)
@@ -100,7 +100,7 @@ def create_enemies():
     return enemies
 
 enemies = create_enemies()
-enemy_speed = 1
+enemy_speed = 2
 next_speed_threshold = 100
 
 
@@ -226,8 +226,8 @@ def restart():
     score = 0
     game_over = False
     bullet_state = "ready"
-    enemy_speed = 0.5
-    bullet_speed = 2
+    enemy_speed = 2
+    bullet_speed = 4
     next_speed_threshold = 100
 
     score_pen.clear()
@@ -324,10 +324,10 @@ while True:
             score += 10
             score_pen.clear()
             score_pen.goto(0, 260)
-            score_pen.write(f"Score: {score}", align="center", font=("Courier", 18, "normal"))
+            score_pen.write(f"Score: {score}", align="center", font=("Courier", 18, "normal")) #--------------------------POWER UP SPEEDS------------------
             if score >= next_speed_threshold:
-                enemy_speed += 0.5
-                bullet_speed += 0.5
+                enemy_speed += 1
+                bullet_speed += 1
                 next_speed_threshold += 100
                 score_pen.goto(0, 230)
                 score_pen.write("Speed Up!", align="center", font=("Courier", 14, "bold"))
@@ -363,11 +363,11 @@ while True:
             score_pen.clear()
             score_pen.write(f"Score: {score} (MULTI SHOT!)", align="center", font=("Courier", 18, "normal"))
 
-    # Powerup effects
+    # Powerup effects-----------------------------------------------------------------------------------------------True Bullet Speed
     if rapid_fire_enabled:
-        bullet_speed = 10
+        bullet_speed = 15
     else:
-        bullet_speed = 4
+        bullet_speed = 6
 
     if powerup_active:
         powerup_timer -= 1
