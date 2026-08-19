@@ -1,0 +1,433 @@
+# Every exercise from first cs python class, very simple problems.
+
+# Exercise 15
+
+import turtle
+turtle.showturtle()
+turtle.right(45)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(200)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.done()
+------------------------------------------------------------------------
+# Exercise 15
+
+import turtle
+turtle.showturtle()
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(200)
+turtle.left(120)
+turtle.forward(200)
+turtle.left(120)
+turtle.forward(200)
+turtle.left(135)
+turtle.forward(140)
+turtle.left(90)
+turtle.forward(140)
+turtle.left(135)
+turtle.forward(100)
+turtle.done()
+------------------------------------------------------------------------
+# Exercise 15
+
+import turtle
+turtle.circle(50)
+turtle.penup()
+turtle.setposition(-120, 0)
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.setposition(60,60)
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.setposition(-60, 60)
+turtle.pendown()
+turtle.circle(50)
+turtle.penup()
+turtle.setposition(-180, 60)
+turtle.pendown()
+turtle.circle(50)
+turtle.done()
+------------------------------------------------------------------------
+# Exercise 15
+
+import turtle
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(135)
+turtle.forward(280)
+turtle.left(135)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(45)
+turtle.forward(140)
+turtle.left(45)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(45)
+turtle.forward(140)
+turtle.done()
+
+------------------------------------------------------------------------
+# Exercise 1
+
+
+dayOfWeek = int(input('Input the day of the week: '))
+
+if dayOfWeek == 1:
+    print('Today is Sunday')
+elif dayOfWeek == 2:
+    print('Today is Monday')
+elif dayOfWeek == 3:
+    print('Today is Tuesday')
+elif dayOfWeek == 4:
+    print('Today is Wednesday')
+elif dayOfWeek == 5:
+    print('Today is Thursday')
+elif dayOfWeek == 6:
+    print('Today is Friday')
+elif dayOfWeek == 7:
+    print('Today is Saturday')
+else:
+    print('ERROR')
+
+------------------------------------------------------------------------
+# Exercise 5
+
+
+mass = float(input("Input the mass of the object: "))
+
+weight = mass * 9.8
+
+if weight > 500:
+    print('Object is too heavy')
+elif weight < 100:
+    print('Object is too light')
+else:
+    print('Object is', weight, 'kilograms')
+
+------------------------------------------------------------------------
+# Exercise 10
+
+
+pennies = float(input("Input the amount of pennies: "))
+nickels = float(input("Input the amount of nickels: "))
+dimes = float(input("Input the amount of dimes: "))
+quarters = float(input("Input the amount of quarters: "))
+
+penToat = pennies * 1
+nickToat = nickels * 5
+dimeToat = dimes * 10
+quartToat = quarters * 25
+total = penToat + nickToat + dimeToat + quartToat
+
+if total == 100:
+    print("Congrats, your total is one dollar!")
+elif total < 100:
+    print('Sorry, but your total is less than one dollar.')
+elif total > 100:
+    print('Sorry, but your total is more than one dollar.')
+else:
+    print('Error')
+
+------------------------------------------------------------------------
+# Exercise 15
+
+
+minutes = 0
+hours = 0
+days = 0
+
+seconds = int(input("Input the amount of seconds: "))
+
+
+if seconds > 86400:
+    days = int(seconds / 86400)
+    seconds = seconds - days * 86400
+if seconds > 3600:
+    hours = int(seconds / 3600)
+    seconds = seconds - hours * 3600
+if seconds > 60:
+    minutes = int(seconds / 60)
+    seconds = seconds - minutes * 60
+print(days, "Days", hours, "Hours", minutes, "Minutes", seconds, "Seconds")
+
+------------------------------------------------------------------------
+# Exercise 18
+
+joeBurg = True
+pizza = True
+cafe = True
+mama = True
+chef = True
+
+vegetarian = (input('Is anyone in your party a vegetarian?:'))
+vegan = (input('Is anyone in your party a vegan?:'))
+glutenFree = (input('Is anyone in your party a gluten-free?:'))
+if vegetarian == "yes":
+    vegetarianBool = True
+else:
+    vegetarianBool = False
+if vegan == "yes":
+    veganBool = True
+else:
+    veganBool = False
+if glutenFree == "yes":
+    glutenFreeBool = True
+else:
+    glutenFreeBool = False
+
+if vegetarianBool == True:
+    joeBurg = False
+
+if veganBool == True:
+    joeBurg = False
+    mama = False
+    pizza = False
+
+if glutenFreeBool == True:
+    joeBurg = False
+    mama = False
+
+print("The restaurants you can eat at are: ")
+
+if joeBurg == True:
+    print("Joe's Gourmet Burgers")
+if pizza == True:
+    print("Main Street Pizza Company")
+if cafe == True:
+    print("Corner Cafe")
+if mama == True:
+    print("Mama's Fine Italian")
+if chef == True:
+    print("The chef's Kitchen")
+
+------------------------------------------------------------------------
+# Exercise 1
+
+days = 0
+bugs = 0
+
+while days < 5:
+    bugsCaught = int(input("How many bugs were caught today?: "))
+    bugs = bugs + bugsCaught
+    days = days + 1
+    if days == 5:
+        print("Over the past 5 days. you've caught", bugs, "bugs!")
+
+------------------------------------------------------------------------
+# Exercise 5
+
+month = 0
+yearLoop = 0
+totalRainfall = 0
+monthCount = 0
+rainfallAverage = int
+
+year = int(input(Input the amount of years ))
+
+while yearLoop  year
+    while month  12
+        rainfall = int(input(Input the amount of rainfall in inches ))
+        month += 1
+        monthCount += 1
+        totalRainfall = totalRainfall + rainfall
+        rainfallAverage = totalRainfall  monthCount
+    if month == 12
+        yearLoop = yearLoop + 1
+        month = 0
+    if yearLoop == year
+        print(The total number of months recorded is, monthCount)
+        print(The total amount of rainfall in inches is, totalRainfall, inches)
+        print(The average amount of rainfall is, rainfallAverage, inches)
+
+------------------------------------------------------------------------
+# Exercise 10
+
+year = 0
+tuition = 8000
+increase = 1.03
+date = 0
+
+while year < 5:
+    tuition = tuition * increase
+    year = year + 1
+    date = date + 1
+    print("Year", date)
+    print("$", tuition)
+
+
+------------------------------------------------------------------------
+# Exercise 15
+
+for loop in range(7):
+    print("#"+(" " * loop) + "#")
+
+------------------------------------------------------------------------
+# Exercise 5.1 
+
+kilometers = int(input("Insert the amount of kilometers please: "))
+
+miles = kilometers * 0.6214
+
+print(miles)
+
+------------------------------------------------------------------------
+# Exercise 5.5
+
+propVal = int(input('What is the actual value of the property: '))
+assVal = propVal * 0.06
+propTax = assVal / 100 * 0.72 * 10
+print("The assessment value is", assVal, "dollars, and the property tax is", propTax, "dollars.")
+
+------------------------------------------------------------------------
+# Exercise 5.10
+
+def main():
+    feet = int(input("Please input the amount of feet you'd like to convert: "))
+
+    def feet_to_inches(num):
+        inches = num * 12
+        return inches
+    inch = feet_to_inches(feet)
+    print(feet, "feet =", inch, "inches.")
+
+    
+main()
+
+
+------------------------------------------------------------------------
+# Exercise 5.15
+
+def tests():
+    test_one = int(input("Please enter the first score: "))
+    test_two = int(input("Please enter the second score: "))
+    test_three = int(input("Please enter the third score: "))
+    test_four = int(input("Please enter the fourth score: "))
+    test_five = int(input("Please enter the fifth score: "))
+
+    def calc_average(first, second, third, fourth, fifth):
+        average = (first + second + third + fourth + fifth) / 5
+        return average
+
+    def determine_grade(score):
+        if score < 60:
+            grade = "F"
+        if score >= 60 and score <= 69:
+            grade = "D"
+        if score >= 70 and score <= 79:
+            grade = "C"
+        if score >= 80 and score <= 89:
+            grade = "D"
+        if score >= 90:
+            grade = "A"
+        return grade
+
+    print("\nScore \t Grade")
+    grade = determine_grade(test_one)
+    print(test_one, "\t", grade)
+    grade = determine_grade(test_two)
+    print(test_two, "\t", grade)
+    grade = determine_grade(test_three)
+    print(test_three, "\t", grade)
+    grade = determine_grade(test_four)
+    print(test_four, "\t", grade)
+    grade = determine_grade(test_five)
+    print(test_five, "\t", grade)
+
+    total_average = calc_average(test_one, test_two, test_three, test_four, test_five)
+
+    print("Your Average Score Was", total_average)
+
+
+tests()
+
+------------------------------------------------------------------------
+# Exercise 5.20
+import random
+
+
+def game():
+
+    value = random.randint(1, 100)
+    guesses = 0
+    number = 0
+    while number != value:
+        number = int(input("Try and guess the random number: "))
+        guesses += 1
+        if number < value:
+            print("Too low, try again: ")
+        if number > value:
+            print("Too high, try again: ")
+        if number == value:
+            print(number, "is correct!!! It only took you", guesses, "tries!")
+            print("A new number has been generated, so try and guess it!")
+            value = random.randint(1, 100)
+            number = 0
+            guesses = 0
+
+
+game()
+
+------------------------------------------------------------------------
+# Easter.py
+
+day = 0
+month = 0
+inpYear = int(input("Input a year between 1900 and 2099: "))
+
+while inpYear >= 0:
+
+    if 1900 <= inpYear <= 2099:
+        valueD = inpYear - 1900
+        valueR = valueD % 19
+        valueP = (7 * valueR + 1) // 19
+        valueS = (11 * valueR + 4 - valueP) % 29
+        valueQ = valueD // 4
+        valueT = (valueD + valueQ + 31 - valueS) % 7
+        monthRule = (25 - valueS - valueT)
+        if monthRule > 0:
+            day = monthRule
+            month = "April"
+            print("(Western) Easter Sunday -", day, month, ",", inpYear)
+        else:
+            day = 31 + monthRule
+            month = "March"
+            print("(Western) Easter Sunday -", day, month, ",", inpYear)
+        inpYear = int(input("Input another year between 1900 and 2099: "))
+    else:
+        inpYear = int(input("The year must be BETWEEN 1900 and 2099: "))
+
+print("Bye...")
+
+------------------------------------------------------------------------
+
+
+
+
